@@ -68,15 +68,18 @@ hr{
     width: 90%;
     margin: auto;
 }
-
-#std-enqiry2 .enqiry-form, .enqiry-txt{
+#register2{
+    background-color: #263B5D;
+    color: #fff;
+}
+#register2 .enqiry-form, .enqiry-txt{
     margin: auto;
 }
-#std-enqiry2 .enqiry-form form div input, .enqiry-form form textarea{
+#register2 .enqiry-form form div input, .enqiry-form form textarea{
     background-color: inherit;
     color: #fff;
 }
-#std-enqiry2 .enqiry-form form div input::placeholder{
+#register2 .enqiry-form form div input::placeholder{
     color: #fff;
 }
 @media (max-width:768px) {
@@ -119,6 +122,13 @@ hr{
     body{
         width: 80%;
         margin: auto;
+    }
+    #register2{
+         background-color: #fff;
+         color: #000;
+    }
+    #register2 .enqiry-form form div input::placeholder{
+        color: grey;
     }
 }
 
