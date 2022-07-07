@@ -1,26 +1,35 @@
-Number.prototype.format = function(n, x) {
-    var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\.' : '$') + ')';
-    return this.toFixed(Math.max(0, ~~n)).replace(new RegExp(re, 'g'), '$&,');
-  };
-  
-  function payWithPaystack() {
-      let handler = PaystackPop.setup({
-        key: 'pk_test_32907531c2bf152bf00ee7685383b9d32c05f543', // Replace with public key for test or live mode
-        name: document.getElementById("payment-firstName").value + document.getElementById("payment-lastName").value,
-        email: document.getElementById("payment-email").value,
-        number: document.getElementById("payment-phone").value,
-        // country: document.getElementById("payment-country").value,
-        // city: document.getElementById("payment-city").value,
-        // amount: document.querySelector("input[type='radio'][name=amount]:checked").value * 100,
-        currency: "NGN",
-        ref: '' + Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference.
-        onClose: function() {
-          alert('Window closed.');
-        },
-        callback: function(response) {
-          window.location = "https://theaf.org/?reference=https://e-novate-bootcamp.netlify.app/" + response.reference;
-        }
-        // On the redirected page, you can call Paystack's verify endpoint.
-      });
-      handler.openIframe();
-  }
+function payWithPaystack() {
+
+  var handler = PaystackPop.setup({ 
+      key: 'your_public_key', //put your public key here
+      email: 'customer@email.com', //put your customer's email here
+      amount: 370000, //amount the customer is supposed to pay
+      metadata: {
+          custom_fields: [
+              {
+                  display_name: "Mobile Number",
+                  variable_name: "mobile_number",
+                  value: "+2348012345678" //customer's mobile number
+              }
+          ]
+      },
+      callback: function (response) {
+          //after the transaction have been completed
+          //make post call  to the server with to verify payment 
+          //using transaction reference as post data
+          $.post("verify.php", {reference:response.reference}, function(status){
+              if(status == "success")
+                  //successful transaction
+                  alert('Transaction was successful');
+              else
+                  //transaction failed
+                  alert(response);
+          });
+      },
+      onClose: function () {
+          //when the user close the payment modal
+          alert('Transaction cancelled');
+      }
+  });
+  handler.openIframe(); //open the paystack's payment modal
+}
