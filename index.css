@@ -1,0 +1,122 @@
+#about-hero{
+    /* background: linear-gradient(to right, #fff 35%, #fff 10%, #263B5D 0%, #263B5D 100%); */
+    height: fit-content;
+    background-color: #263B5D !important;
+}
+.abt-hero-txt{
+    width: 50%;
+    color: #000;
+}
+.abt-hero-img{
+    /* position: absolute; */
+    width: 50%;
+    /* top: 15%;
+    left: 50%; */
+    height: 75vh;
+}
+.abt-hero-img img{
+    height: 100%;
+}
+.card{
+    width: 30%;
+    margin: 20px auto;
+}
+.card-body{
+    width: 100%;
+}
+hr{
+    width: 90%;
+}
+#enovate-abt{
+    color: #fff;
+    background-color: #263B5D !important;
+}
+#enovate-abt div{
+    width: 48%;
+}
+.counter-box{
+    flex-wrap: wrap;
+    width: 100%;
+}
+.counter-box-inner{
+    width: 100%;
+    height: 200px;
+    margin: auto;
+}
+.count2{
+    box-shadow: 0px 1.5px rgba(128,128,128, 0.5);
+}
+.count3{
+    box-shadow: 1.5px 0px rgba(128,128,128, 0.5);
+}
+.count1{
+    box-shadow: 1.5px 1.5px rgba(128,128,128, 0.5);
+}
+.academic-alliance-box .card{
+    border: none;
+    width: 48%;
+}
+.enqiry-form, .enqiry-txt{
+    width: 45%;
+}
+.enqiry-form form div input, .enqiry-form form textarea{
+    border: none;
+    border-bottom: 1px solid #808080;
+    width: 40%;
+}
+.enqiry-form form textarea{
+    width: 90%;
+    margin: auto;
+}
+@media (max-width:768px) {
+    .abt-hero-txt{
+        width: 100%;
+    }
+    #about-hero{
+        background: #fff;
+        margin-bottom: 0%;
+    }
+    .card{
+        width: 100%;
+    }
+    hr{
+        width: 80%;
+    }
+    #enovate-abt div{
+        width: 100%;
+        margin: auto;
+    }
+    .counter-box{
+        display: flex;
+        width: 50%;
+    }
+    .counter-box div{
+        width: 50% !important;
+    }
+    .academic-alliance-box .card{
+        width: 100%;
+    }
+    .enqiry-form, .enqiry-txt{
+        width: 100%;
+    }
+    .enqiry-form{
+        margin-top: 50px;
+    }
+    .enqiry-form form div input{
+        width: 48%;
+    }
+    body{
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media (min-width:800px) and (max-width:835px) {
+    .abt-hero-img{
+        position: absolute;
+        width: 50%;
+        top: -10%;
+        left: 50%;
+        height: 100vh;
+    }
+}

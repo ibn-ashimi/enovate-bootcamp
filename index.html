@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONT AWESOME CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css" integrity="sha512-DD6Lm09YDHzhW3K4eLJ9Y7sFrBwtCF+KuSWOLYFqKsZ6RX4ifCu9vWqM4R+Uy++aBWe6wD4csgQRzGKp5vP6tg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <!-- SLICK CSS -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    
+    <!-- jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js" integrity="sha512-dRkH0Y8hsCAHQDEKMuatuvYenMj+FLiUKLbwaKe952wo+xqq/B2+HNlhagtcKYY1WwMFrvTI170oFNZ0UHlJPg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <!-- SLICK SLIDER CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="config.css">
+    <link rel="stylesheet" href="index.css">
+    <title>About</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top mb-0" id="my-nav">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#std-enqiry"><img src="logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border-color:#FF206E;">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+              </li>
+              <li class="nav-item">
+                <a class="nav-link yellow-txt" href="#about-hero">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link yellow-txt" href="#std-enqiry">Register</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>  
+
+    <script src="paystack.js"></script>
+    <section id="std-enqiry" class="p-5 container-fluid">
+        <div class="d-md-flex align-items-center justify-content-evenly mx-auto">
+            <div class="enqiry-txt">
+                <h1>Need help with <span class="yellow-txt">consultation?</span></h1>
+                <h3 class="mb-3">Fill our <span class="yellow-txt">student enquiry</span> form</h3>
+                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut odit nobis nam quod veniam quia blanditiis? Voluptatum, pariatur nemo. Porro corrupti odit, aliquid earum dicta tempore suscipit velit. Facere, quibusdam!
+                </p>
+                <p>For more enquiries, email us <a href="mailto:enovatelabs@gmail.com" class="text-dark"><strong>@enovatelabs@gmail.com</strong></a></p>
+            </div>
+            <div class="enqiry-form">
+                <form action="" method="post" class="">
+                    <div class="d-flex align-items-center justify-content-evenly mb-5">
+                        <input type="text" placeholder="First Name" class="form-control" id="payment-firstName" required>
+                        <input type="text" placeholder="Last Name" class="form-control" id="payment-lastName" required>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-evenly mb-5">
+                        <input type="text" placeholder="Email address" class="form-control" id="payment-email" required>
+                        <input type="text" placeholder="Phone number" class="form-control" id="payment-phone" required>
+                    </div>
+                    <!-- <textarea name="enquiry-message" id="enquiry-message" cols="30" rows="5" class="form-control mb-5" placeholder="What is your enquiry?"></textarea>  -->
+                    <!-- <input type="radio" name="amount" id="payment"> -->
+                    <div class="d-flex align-items-center justify-content-evenly mb-5">
+                        <input type="submit" onclick="payWithPaystack();" value="Register" class="btn yellow-bg text-white mx-auto">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-hero" class="container-fluid d-md-flex p-5">
+        <div class="abt-hero-txt mt-5">
+            <h1 class="mb-5 text-white">Trusted IT solutions from our<br> <span class="yellow-txt">professional instructors</span></h1>
+            <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate voluptatem nulla, magni culpa, sit maiores accusamus distinctio necessitatibus veniam laborum eius porro neque in error numquam temporibus atque incidunt aliquam!</p>
+            <p class="text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum illum accusamus eaque, deserunt perferendis numquam saepe repudiandae cupiditate ducimus at.</p>
+        </div>
+        <div class="abt-hero-img no-display">
+            <img src="Online learning-bro.svg" alt="" class="img-fluid">
+        </div>
+    </section>
+    
+    <hr class="mx-auto">
+
+    <section id="why-enovate" class="p-md-5 container-fluid">
+        <div class="mx-auto text-center why-enovate-txt">
+            <b><h1><span class="yellow-txt">Are you ready</span> to learn?</h1></b>
+            <h3>We are here to <span class="yellow-txt">teach you</span></h3>
+        </div>
+       <div class="d-md-flex align-items-center justify-content-evenly mt-5">
+            <div class="card mx-auto p-3 bg-grey text-white">
+                <div class="card-body">
+                <h5 class="text-left"><i class="fa fa-2x fa-line-chart yellow-txt"></i></h5>
+                <h4 class="card-title my-4">Who are we?</h4>
+                <p class="card-text my-4">At enovate, we are a leading IT training brand. We have gained a reputation for quality and integrity with which we provide our servicess to millions of students worldwide.</p>
+                <a href="#" class="text-white card-link"><p>Learn more</p></a>
+                </div>
+            </div>
+            <div class="card mx-auto p-3 bg-grey text-white">
+                <div class="card-body">
+                <h5 class="text-left"><i class="fa fa-2x fa-line-chart yellow-txt"></i></h5>
+                <h4 class="card-title my-4">What we do.</h4>
+                <p class="card-text my-4">We provide quality teaching services to our students by training them with real-life working experiences and ensuring that they are job ready by the time they graduate. Our methods are methodical</p>
+                <a href="#" class="text-white card-link"><p>Learn more</p></a>
+                </div>
+            </div>
+            <div class="card mx-auto p-3 bg-grey text-white">
+                <div class="card-body">
+                <h5 class="text-left"><i class="fa fa-2x fa-line-chart yellow-txt"></i></h5>
+                <h4 class="card-title my-4">How we do it.</h4>
+                <p class="card-text my-4">We ensure that we employ instructors trained specially for the purpose. Our academic alliances also make it possible for qualified students to earn academic certificates from recognized universities.</p>
+                <a href="#" class="text-white card-link"><p>Learn more</p></a>
+            </div>
+        </div>
+       </div>
+    </section>
+
+    <section id="enovate-abt" class="d-md-flex p-5 mx-auto container-fluid">
+        <div class="">
+            <h2 class="text-left mb-3">We think about each student and ensure we <span class="yellow-txt">consider them in decision making</span></h2>
+            <div class="w-75"><img src="Nerd-pana.svg" alt=""></div>
+        </div>
+        <div class="about-info-count">
+            <b><p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ipsa, aliquam qui vel quis tenetur neque unde recusandae corrupti nesciunt, illum, officia asperiores maxime expedita cum possimus consequuntur sit nam!</p></b>
+            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam debitis nisi modi cumque sit veritatis ducimus laudantium accusantium aut, facere incidunt iusto cum ullam impedit saepe, maxime dicta neque voluptas qui culpa perferendis a praesentium consequuntur. Vel ea blanditiis nostrum.</p>
+            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam debitis nisi modi cumque sit veritatis ducimus laudantium accusantium aut, facere incidunt iusto cum ullam impedit saepe, maxime dicta neque voluptas qui culpa perferendis a praesentium consequuntur. Vel ea blanditiis nostrum.</p>
+            <!-- <div class="counter-box d-flex align-items-center justify-content-evenly mx-auto">
+                <div class="counter-box-inner my-2 count1 d-flex align-items-center justify-content-start">
+                    <div class="text-center">
+                        <h1 class="count">5</h1>
+                        <p>Continents</p>
+                    </div>
+                </div>
+                <div class="counter-box-inner my-2 count2 d-flex align-items-center justify-content-center">
+                    <div class="text-center">
+                        <h1 class="count">40</h1>
+                        <p>Countries</p>
+                    </div>
+                </div>
+                <div class="counter-box-inner my-2 count3 d-flex align-items-center justify-content-start">
+                    <div class="text-center">
+                        <h1 class="count">35</h1>
+                        <p class="text-center">Years Experience</p>
+                    </div>
+                </div>
+                <div class="counter-box-inner my-2 count4 d-flex align-items-center justify-content-center">
+                    <div class="text-center">
+                        <h1 class="count">7000000</h1>
+                        <p>Students</p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    
+
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</body>
+</html>
